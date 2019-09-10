@@ -20,9 +20,9 @@ steps:
     image: plugins/docker:latest
     settings:
       username:
-        from_secret: docker_username
+        from_secret: shanli2012
       password:
-        from_secret: docker_password
+        from_secret: Shanli2016
       repo: example/demo
       tags: latest
 
