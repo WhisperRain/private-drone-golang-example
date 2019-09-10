@@ -17,7 +17,7 @@ steps:
   #      - npm test
 
   - name: publish
-    image: plugins/docker:latest
+    image: shanli2012/dronedemo:latest
     settings:
       username:
         from_secret: shanli2012
