@@ -19,7 +19,7 @@ steps:
   - name: publish
     image: plugins/docker:latest
     commands:
-      - login
+      - /usr/local/bin/docker login
     settings:
       username:
         from_secret: shanli2012
