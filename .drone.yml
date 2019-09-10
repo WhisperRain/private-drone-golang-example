@@ -21,7 +21,7 @@ steps:
     commands:
       - /usr/local/bin/docker login
     settings:
-      username:shanli2012
+      username: shanli2012
       password: Shanli2016
       repo: shanli2012/dronedemo2
       tags: latest
