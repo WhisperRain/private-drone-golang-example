@@ -23,7 +23,7 @@ steps:
         from_secret: shanli2012
       password:
         from_secret: Shanli2016
-      repo: example/demo
+      repo: shanli2012/dronedemo
       tags: latest
 
   - name: deploy
