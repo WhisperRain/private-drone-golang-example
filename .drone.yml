@@ -21,26 +21,26 @@ steps:
     settings:
       username: shanli2012
       password: Shanli2016
-      repo: shanli2012/dronedemo2
+      repo: shanli2012/dronedemo
       tags: latest
 
   - name: deploy
     image: appleboy/drone-ssh
     pull: true
     settings:
-      host: kanda.me
-      user: cpp
-      key:
-        from_secret: deploy_key
+      host: 61.171.217.191
+      username: dev
+      password: 1234
+      port: 22
       script:
         - cd /data/
         - mkdir app/
         - cd /data/app
-        - docker rmi -f example/demo
+        - docker rmi -f shanli2012/dronedemo
         - echo "login docker"
-#        - docker login --username ${DOCKER_USER} --password ${DOCKER_SEC}
+        - docker login --username shanli2012 --password Shanli2016
         - echo "login success, pulling..."
-        - docker pull example/demo:latest
+        - docker pull shanli2012/dronedemo:latest
         - echo "image running"
-        - docker run -p 8088:8088 -d example/demo
+        - docker run -p 8088:8088 -d shanli2012/dronedemo
         - echo "run success"
