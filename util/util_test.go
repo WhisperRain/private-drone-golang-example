@@ -1,9 +1,13 @@
 package util
 
-
 import (
+	"fmt"
+	"math"
 	"testing"
+	"time"
 )
+
+
 
 func TestMaxTimeOfCI(t *testing.T) {
 	t.Log("begin")
@@ -12,5 +16,9 @@ func TestMaxTimeOfCI(t *testing.T) {
 		time.Sleep(time.Second*1)
 		t.Log("the ",i," second")
 	}
- 
+
+	fmt.Println("hello world 2")
+	if HelloWorld() != "hello world" {
+		t.Errorf("got %s expected %s", HelloWorld(), "hello world")
+	}
 }
